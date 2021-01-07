@@ -1,0 +1,84 @@
+.loginFormWrapper {
+    width: 30%;
+    background-color: white;
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 1rem 0;
+    /*z-index: -2;*/
+}
+
+.signUpSpan {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+
+    border: none;
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+}
+
+.credentialsInput {
+    border: 0;
+    font-size: 2rem;
+
+    transition: .2s;
+}
+
+.credentialsLabel {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+
+    width: 20%;
+    border-top: 2px solid red;
+
+    margin-bottom: 2rem;
+    transition: .2s;
+}
+
+.credentialsLabel > span {
+    position: absolute;
+    top: -2.4rem;
+    font-size: 2rem;
+
+    transition: .2s;
+}
+
+.credentialsInput:focus {
+    padding-top: 2rem;
+}
+
+.credentialsInput:focus + .credentialsLabel {
+    width: 80%;
+}
+
+.credentialsInput:focus + .credentialsLabel > span {
+    font-size: 1.2rem;
+    color: grey;
+    top: -4.2rem;
+}
+
+.validCredentialsLabel {
+    border-top: 2px solid #36de00;
+}
+
+.filledCredentialsInput + .credentialsLabel > span {
+    font-size: 1.2rem;
+    color: grey;
+    top: -4.2rem;
+}
+
+.filledCredentialsInput {
+    padding-top: 2rem;
+}
+
+
+
+
+
+
+
