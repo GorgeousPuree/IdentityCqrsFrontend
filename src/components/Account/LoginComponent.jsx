@@ -13,8 +13,14 @@ const LoginComponent = () => {
     if (values.username.length < COMMON.MIN_USERNAME_LENGTH) {
       errors.username = LOGIN_FORM.USERNAME_TOO_SHORT;
     }
+    if (values.username.length > COMMON.MAX_USERNAME_LENGTH) {
+      errors.username = LOGIN_FORM.USERNAME_TOO_LONG;
+    }
     if (values.password.length < COMMON.MIN_PASSWORD_LENGTH) {
       errors.password = LOGIN_FORM.PASSWORD_TOO_SHORT;
+    }
+    if (values.password.length > COMMON.MAX_PASSWORD_LENGTH) {
+      errors.password = LOGIN_FORM.PASSWORD_TOO_LONG;
     }
     return errors;
   };
@@ -76,6 +82,7 @@ const LoginComponent = () => {
             }
           }}
           value={formik.values.username}
+          maxLength={32}
         />
         <label
           htmlFor="username"
@@ -108,6 +115,7 @@ const LoginComponent = () => {
             }
           }}
           value={formik.values.password}
+          maxLength={32}
         />
         <label
           htmlFor="password"
